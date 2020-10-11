@@ -26,10 +26,10 @@ jobs:
   # You may pin to the exact commit or the version.
   # uses: OrRosenblatt/validate-json-action@a7082767d95a588f79b1d742a835b11bbfd4ea32
         uses: OrRosenblatt/validate-json-action@0.1.0
-        with:
+        env:
            # Relative file path under the repository of a JSON schema file to validate the other JSON files with.
-          schema : ukd-mdms-data/data/uk/ACCESSCONTROL-ACTIONS-TEST/schema.json
+          INPUT_SCHEMA : ./data/uk/ACCESSCONTROL-ACTIONS-TEST/schema.json
           # One or more relative file paths under the repository (seperated by comma) of the JSON files to validate with the schema provided.
-          json: ukd-mdms-data/data/uk/ACCESSCONTROL-ACTIONS-TEST/actions-test.json
+          INPUT_JSONS: ./data/uk/ACCESSCONTROL-ACTIONS-TEST/actions-test.json
 
       
