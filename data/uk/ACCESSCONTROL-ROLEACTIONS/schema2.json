@@ -5,7 +5,7 @@
 	"title": "Root", 
 	"type": "object",
 	"required": [
-		"tenantId",
+		
 		"moduleName",
 		"roleactions"
 	],
@@ -42,8 +42,8 @@
 				"required": [
 					"rolecode",
 					"actionid",
-					"actioncode",
-					"tenantId"
+					"actioncode"
+					
 				],
 				"properties": {
 					"rolecode": {
