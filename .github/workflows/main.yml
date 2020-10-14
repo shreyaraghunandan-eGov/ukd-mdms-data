@@ -28,8 +28,8 @@ jobs:
         uses: docker://orrosenblatt/validate-json-action:latest
         env:
            # Relative file path under the repository of a JSON schema file to validate the other JSON files with.
-          INPUT_SCHEMA : ./data/uk/ACCESSCONTROL-ACTIONS-TEST/schema.json
+          INPUT_SCHEMA : ./data/uk/ACCESSCONTROL-ROLEACTIONS/schema2.json
           # One or more relative file paths under the repository (seperated by comma) of the JSON files to validate with the schema provided.
-          INPUT_JSONS: ./data/uk/ACCESSCONTROL-ACTIONS-TEST/actionstest.json,./data/uk/ACCESSCONTROL-ROLEACTIONS/roleactions.json, ./data/uk/ACCESSCONTROL-ROLES/roles.json
+          INPUT_JSONS: ./data/uk/ACCESSCONTROL-ROLEACTIONS/roleactions.json
 
       
