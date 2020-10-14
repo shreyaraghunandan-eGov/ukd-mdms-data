@@ -6254,7 +6254,7 @@
         }
     ],
     "required": [
-        
+       
         "moduleName",
         "roleactions"
     ],
@@ -6323,7 +6323,7 @@
                             "rolecode",
                             "actionid",
                             "actioncode",
-                           
+                            
                         ],
                         "properties": {
                             "rolecode": {
@@ -6387,7 +6387,7 @@
                             "rolecode",
                             "actionid",
                             "actioncode",
-                            
+                          
                         ],
                         "properties": {
                             "rolecode": {
