@@ -6254,7 +6254,7 @@
         }
     ],
     "required": [
-        "tenantId",
+        
         "moduleName",
         "roleactions"
     ],
@@ -6323,7 +6323,7 @@
                             "rolecode",
                             "actionid",
                             "actioncode",
-                            "tenantId"
+                           
                         ],
                         "properties": {
                             "rolecode": {
@@ -6387,7 +6387,7 @@
                             "rolecode",
                             "actionid",
                             "actioncode",
-                            "tenantid"
+                            
                         ],
                         "properties": {
                             "rolecode": {
