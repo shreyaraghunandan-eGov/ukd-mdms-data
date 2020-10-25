@@ -105,7 +105,7 @@
 					"parentModule": {
 						"$id": "#root/actions-test/items/parentModule", 
 						"title": "Parentmodule", 
-						"type": "string",
+						"type": ["string",null],
 						"default": "",
 						"examples": [
 							"PGR"
