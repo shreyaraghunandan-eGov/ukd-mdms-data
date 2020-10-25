@@ -56,7 +56,7 @@
 					"id": {
 						"$id": "#root/actions-test/items/id", 
 						"title": "Id", 
-						"type": "integer",
+						"type": "object",
 						"uniqueItems": true,
 						"examples": [
 							14
