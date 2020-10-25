@@ -45,7 +45,6 @@
 					"url",
 					"displayName",
 					"orderNumber",
-					"queryParams",
 					"parentModule",
 					"enabled",
 					"serviceCode",
