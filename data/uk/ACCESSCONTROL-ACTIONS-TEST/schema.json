@@ -95,7 +95,7 @@
 					"queryParams": {
 						"$id": "#root/actions-test/items/queryParams", 
 						"title": "Queryparams", 
-						"type": "string",
+						"type": ["string","null"],
 						"default": "",
 						"examples": [
 							"fileStoreId="
