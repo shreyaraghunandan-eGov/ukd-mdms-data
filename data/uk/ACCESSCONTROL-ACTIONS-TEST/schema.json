@@ -40,16 +40,7 @@
 				"title": "Items", 
 				"type": "object",
 				"required": [
-					"id",
-					"name",
-					"url",
-					"displayName",
-					"orderNumber",
-					"parentModule",
-					"enabled",
-					"serviceCode",
-					"code",
-					"path"
+					"id"
 				],
 				"properties": {
 					"id": {
