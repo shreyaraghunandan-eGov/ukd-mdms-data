@@ -1,0 +1,139 @@
+{
+	"definitions": {},
+	"$schema": "http://json-schema.org/draft-07/schema#", 
+	"$id": "https://example.com/object1603770464.json", 
+	"title": "Root", 
+	"type": "object",
+	"required": [
+		"tenantId",
+		"moduleName",
+		"BusinessService"
+	],
+	"properties": {
+		"tenantId": {
+			"$id": "#root/tenantId", 
+			"title": "Tenantid", 
+			"type": "string",
+			"default": "",
+			"examples": [
+				"uk"
+			],
+			"pattern": "^.*$"
+		},
+		"moduleName": {
+			"$id": "#root/moduleName", 
+			"title": "Modulename", 
+			"type": "string",
+			"default": "",
+			"examples": [
+				"BillingService"
+			],
+			"pattern": "^.*$"
+		},
+		"BusinessService": {
+			"$id": "#root/BusinessService", 
+			"title": "Businessservice", 
+			"type": "array",
+			"default": [],
+			"items":{
+				"$id": "#root/BusinessService/items", 
+				"title": "Items", 
+				"type": "object",
+				"required": [
+					"businessService",
+					"code",
+					"collectionModesNotAllowed",
+					"partPaymentAllowed",
+					"isAdvanceAllowed",
+					"demandUpdateTime",
+					"isVoucherCreationEnabled",
+					"hasOnlinePayment"
+				],
+				"properties": {
+					"businessService": {
+						"$id": "#root/BusinessService/items/businessService", 
+						"title": "Businessservice", 
+						"type": "string",
+						"default": "",
+						"examples": [
+							"PropertyTax"
+						],
+						"pattern": "^.*$"
+					},
+					"code": {
+						"$id": "#root/BusinessService/items/code", 
+						"title": "Code", 
+						"type": "string",
+						"default": "",
+						"examples": [
+							"PT"
+						],
+						"pattern": "^.*$"
+					},
+					"collectionModesNotAllowed": {
+						"$id": "#root/BusinessService/items/collectionModesNotAllowed", 
+						"title": "Collectionmodesnotallowed", 
+						"type": "array",
+						"default": [],
+						"items":{
+							"$id": "#root/BusinessService/items/collectionModesNotAllowed/items", 
+							"title": "Items", 
+							"type": "string",
+							"default": "",
+							"examples": [
+								"DD"
+							],
+							"pattern": "^.*$"
+						}
+					},
+					"partPaymentAllowed": {
+						"$id": "#root/BusinessService/items/partPaymentAllowed", 
+						"title": "Partpaymentallowed", 
+						"type": "boolean",
+						"examples": [
+							false
+						],
+						"default": true
+					},
+					"isAdvanceAllowed": {
+						"$id": "#root/BusinessService/items/isAdvanceAllowed", 
+						"title": "Isadvanceallowed", 
+						"type": "boolean",
+						"examples": [
+							true
+						],
+						"default": true
+					},
+					"demandUpdateTime": {
+						"$id": "#root/BusinessService/items/demandUpdateTime", 
+						"title": "Demandupdatetime", 
+						"type": "integer",
+						"examples": [
+							86400000
+						],
+						"default": 0
+					},
+					"isVoucherCreationEnabled": {
+						"$id": "#root/BusinessService/items/isVoucherCreationEnabled", 
+						"title": "Isvouchercreationenabled", 
+						"type": "boolean",
+						"examples": [
+							true
+						],
+						"default": true
+					},
+					"hasOnlinePayment": {
+						"$id": "#root/BusinessService/items/hasOnlinePayment", 
+						"title": "Hasonlinepayment", 
+						"type": "boolean",
+						"examples": [
+							true
+						],
+						"default": true
+					}
+				}
+			}
+
+		}
+	}
+}
