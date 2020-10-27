@@ -1,0 +1,93 @@
+{
+	"definitions": {},
+	"$schema": "http://json-schema.org/draft-07/schema#", 
+	"$id": "https://example.com/object1603769401.json", 
+	"title": "Root", 
+	"type": "object",
+	"required": [
+		"tenantId",
+		"moduleName",
+		"roleactions"
+	],
+	"properties": {
+		"tenantId": {
+			"$id": "#root/tenantId", 
+			"title": "Tenantid", 
+			"type": "string",
+			"default": "",
+			"examples": [
+				"uk"
+			],
+			"pattern": "^.*$"
+		},
+		"moduleName": {
+			"$id": "#root/moduleName", 
+			"title": "Modulename", 
+			"type": "string",
+			"default": "",
+			"examples": [
+				"ACCESSCONTROL-ROLEACTIONS"
+			],
+			"pattern": "^.*$"
+		},
+		"roleactions": {
+			"$id": "#root/roleactions", 
+			"title": "Roleactions", 
+			"type": "array",
+			"default": [],
+			"items":{
+				"$id": "#root/roleactions/items", 
+				"title": "Items", 
+				"type": "object",
+				"required": [
+					"rolecode",
+					"actionid",
+					"actioncode",
+					"tenantId"
+				],
+				"properties": {
+					"rolecode": {
+						"$id": "#root/roleactions/items/rolecode", 
+						"title": "Rolecode", 
+						"type": "string",
+						"default": "",
+						"examples": [
+							"SUPERUSER"
+						],
+						"pattern": "^.*$"
+					},
+					"actionid": {
+						"$id": "#root/roleactions/items/actionid", 
+						"title": "Actionid", 
+						"type": "integer",
+						"examples": [
+							628
+						],
+						"default": 0
+					},
+					"actioncode": {
+						"$id": "#root/roleactions/items/actioncode", 
+						"title": "Actioncode", 
+						"type": "string",
+						"default": "",
+						"examples": [
+							""
+						],
+						"pattern": "^.*$"
+					},
+					"tenantId": {
+						"$id": "#root/roleactions/items/tenantId", 
+						"title": "Tenantid", 
+						"type": "string",
+						"default": "",
+						"examples": [
+							"uk"
+						],
+						"pattern": "^.*$"
+					}
+				}
+			}
+
+		}
+	}
+}
