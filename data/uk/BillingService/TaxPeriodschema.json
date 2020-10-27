@@ -1,0 +1,114 @@
+{
+	"definitions": {},
+	"$schema": "http://json-schema.org/draft-07/schema#", 
+	"$id": "https://example.com/object1603773290.json", 
+	"title": "Root", 
+	"type": "object",
+	"required": [
+		"tenantId",
+		"moduleName",
+		"TaxPeriod"
+	],
+	"properties": {
+		"tenantId": {
+			"$id": "#root/tenantId", 
+			"title": "Tenantid", 
+			"type": "string",
+			"default": "",
+			"examples": [
+				"uk"
+			],
+			"pattern": "^.*$"
+		},
+		"moduleName": {
+			"$id": "#root/moduleName", 
+			"title": "Modulename", 
+			"type": "string",
+			"default": "",
+			"examples": [
+				"BillingService"
+			],
+			"pattern": "^.*$"
+		},
+		"TaxPeriod": {
+			"$id": "#root/TaxPeriod", 
+			"title": "Taxperiod", 
+			"type": "array",
+			"default": [],
+			"items":{
+				"$id": "#root/TaxPeriod/items", 
+				"title": "Items", 
+				"type": "object",
+				"required": [
+					"fromDate",
+					"toDate",
+					"periodCycle",
+					"service",
+					"code",
+					"financialYear"
+				],
+				"properties": {
+					"fromDate": {
+						"$id": "#root/TaxPeriod/items/fromDate", 
+						"title": "Fromdate", 
+						"type": "integer",
+						"examples": [
+							1585699200000
+						],
+						"default": 0
+					},
+					"toDate": {
+						"$id": "#root/TaxPeriod/items/toDate", 
+						"title": "Todate", 
+						"type": "integer",
+						"examples": [
+							1617235199000
+						],
+						"default": 0
+					},
+					"periodCycle": {
+						"$id": "#root/TaxPeriod/items/periodCycle", 
+						"title": "Periodcycle", 
+						"type": "string",
+						"default": "",
+						"examples": [
+							"ANNUAL"
+						],
+						"pattern": "^.*$"
+					},
+					"service": {
+						"$id": "#root/TaxPeriod/items/service", 
+						"title": "Service", 
+						"type": "string",
+						"default": "",
+						"examples": [
+							"PT"
+						],
+						"pattern": "^.*$"
+					},
+					"code": {
+						"$id": "#root/TaxPeriod/items/code", 
+						"title": "Code", 
+						"type": "string",
+						"default": "",
+						"examples": [
+							"PTAN2020"
+						],
+						"pattern": "^.*$"
+					},
+					"financialYear": {
+						"$id": "#root/TaxPeriod/items/financialYear", 
+						"title": "Financialyear", 
+						"type": "string",
+						"default": "",
+						"examples": [
+							"2020-21"
+						],
+						"pattern": "^.*$"
+					}
+				}
+			}
+
+		}
+	}
+}
