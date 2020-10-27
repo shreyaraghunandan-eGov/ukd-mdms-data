@@ -1,0 +1,124 @@
+{
+	"definitions": {},
+	"$schema": "http://json-schema.org/draft-07/schema#", 
+	"$id": "https://example.com/object1603771840.json", 
+	"title": "Root", 
+	"type": "object",
+	"required": [
+		"tenantId",
+		"moduleName",
+		"TaxHeadMaster"
+	],
+	"properties": {
+		"tenantId": {
+			"$id": "#root/tenantId", 
+			"title": "Tenantid", 
+			"type": "string",
+			"default": "",
+			"examples": [
+				"uk"
+			],
+			"pattern": "^.*$"
+		},
+		"moduleName": {
+			"$id": "#root/moduleName", 
+			"title": "Modulename", 
+			"type": "string",
+			"default": "",
+			"examples": [
+				"BillingService"
+			],
+			"pattern": "^.*$"
+		},
+		"TaxHeadMaster": {
+			"$id": "#root/TaxHeadMaster", 
+			"title": "Taxheadmaster", 
+			"type": "array",
+			"default": [],
+			"items":{
+				"$id": "#root/TaxHeadMaster/items", 
+				"title": "Items", 
+				"type": "object",
+				"required": [
+					"category",
+					"service",
+					"name",
+					"code",
+					"isDebit",
+					"isActualDemand",
+					"order"
+				],
+				"properties": {
+					"category": {
+						"$id": "#root/TaxHeadMaster/items/category", 
+						"title": "Category", 
+						"type": "string",
+						"default": "",
+						"examples": [
+							"PENALTY"
+						],
+						"pattern": "^.*$"
+					},
+					"service": {
+						"$id": "#root/TaxHeadMaster/items/service", 
+						"title": "Service", 
+						"type": "string",
+						"default": "",
+						"examples": [
+							"PT"
+						],
+						"pattern": "^.*$"
+					},
+					"name": {
+						"$id": "#root/TaxHeadMaster/items/name", 
+						"title": "Name", 
+						"type": "string",
+						"default": "",
+						"examples": [
+							"Pt late assessment penalty"
+						],
+						"pattern": "^.*$"
+					},
+					"code": {
+						"$id": "#root/TaxHeadMaster/items/code", 
+						"title": "Code", 
+						"type": "string",
+						"default": "",
+						"examples": [
+							"PT_LATE_ASSESSMENT_PENALTY"
+						],
+						"pattern": "^.*$"
+					},
+					"isDebit": {
+						"$id": "#root/TaxHeadMaster/items/isDebit", 
+						"title": "Isdebit", 
+						"type": "boolean",
+						"examples": [
+							false
+						],
+						"default": true
+					},
+					"isActualDemand": {
+						"$id": "#root/TaxHeadMaster/items/isActualDemand", 
+						"title": "Isactualdemand", 
+						"type": "boolean",
+						"examples": [
+							false
+						],
+						"default": true
+					},
+					"order": {
+						"$id": "#root/TaxHeadMaster/items/order", 
+						"title": "Order", 
+						"type": "integer",
+						"examples": [
+							0
+						],
+						"default": 0
+					}
+				}
+			}
+
+		}
+	}
+}
