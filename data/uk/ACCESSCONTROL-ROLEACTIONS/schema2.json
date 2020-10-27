@@ -1,11 +1,11 @@
 {
 	"definitions": {},
 	"$schema": "http://json-schema.org/draft-07/schema#", 
-	"$id": "https://example.com/object1602693154.json", 
+	"$id": "https://example.com/object1603769401.json", 
 	"title": "Root", 
 	"type": "object",
 	"required": [
-		
+		"tenantId",
 		"moduleName",
 		"roleactions"
 	],
@@ -42,8 +42,8 @@
 				"required": [
 					"rolecode",
 					"actionid",
-					"actioncode"
-					
+					"actioncode",
+					"tenantId"
 				],
 				"properties": {
 					"rolecode": {
