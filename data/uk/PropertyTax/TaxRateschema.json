@@ -1,0 +1,125 @@
+{
+	"definitions": {},
+	"$schema": "http://json-schema.org/draft-07/schema#", 
+	"$id": "https://example.com/object1603866348.json", 
+	"title": "Root", 
+	"type": "object",
+	"required": [
+		"tenantId",
+		"moduleName",
+		"TaxRate"
+	],
+	"properties": {
+		"tenantId": {
+			"$id": "#root/tenantId", 
+			"title": "Tenantid", 
+			"type": "string",
+			"default": "",
+			"examples": [
+				"uk"
+			],
+			"pattern": "^.*$"
+		},
+		"moduleName": {
+			"$id": "#root/moduleName", 
+			"title": "Modulename", 
+			"type": "string",
+			"default": "",
+			"examples": [
+				"PropertyTax"
+			],
+			"pattern": "^.*$"
+		},
+		"TaxRate": {
+			"$id": "#root/TaxRate", 
+			"title": "Taxrate", 
+			"type": "array",
+			"default": [],
+			"items":{
+				"$id": "#root/TaxRate/items", 
+				"title": "Items", 
+				"type": "object",
+				"required": [
+					"rate",
+					"minAmount",
+					"flatAmount",
+					"maxAmount",
+					"taxhead",
+					"fromFY",
+					"startingDay",
+					"endingDay"
+				],
+				"properties": {
+					"rate": {
+						"$id": "#root/TaxRate/items/rate", 
+						"title": "Rate", 
+						"type": "integer",
+						"examples": [
+							10
+						],
+						"default": 0
+					},
+					"minAmount": {
+						"$id": "#root/TaxRate/items/minAmount", 
+						"title": "Minamount", 
+						"type": "null",
+						"default": null
+					},
+					"flatAmount": {
+						"$id": "#root/TaxRate/items/flatAmount", 
+						"title": "Flatamount", 
+						"type": "null",
+						"default": null
+					},
+					"maxAmount": {
+						"$id": "#root/TaxRate/items/maxAmount", 
+						"title": "Maxamount", 
+						"type": "null",
+						"default": null
+					},
+					"taxhead": {
+						"$id": "#root/TaxRate/items/taxhead", 
+						"title": "Taxhead", 
+						"type": "string",
+						"default": "",
+						"examples": [
+							"General Tax (Non-residential)"
+						],
+						"pattern": "^.*$"
+					},
+					"fromFY": {
+						"$id": "#root/TaxRate/items/fromFY", 
+						"title": "Fromfy", 
+						"type": "string",
+						"default": "",
+						"examples": [
+							"2019-20"
+						],
+						"pattern": "^.*$"
+					},
+					"startingDay": {
+						"$id": "#root/TaxRate/items/startingDay", 
+						"title": "Startingday", 
+						"type": "string",
+						"default": "",
+						"examples": [
+							"01/04/2019"
+						],
+						"pattern": "^.*$"
+					},
+					"endingDay": {
+						"$id": "#root/TaxRate/items/endingDay", 
+						"title": "Endingday", 
+						"type": "string",
+						"default": "",
+						"examples": [
+							"31/03/2020"
+						],
+						"pattern": "^.*$"
+					}
+				}
+			}
+
+		}
+	}
+}
