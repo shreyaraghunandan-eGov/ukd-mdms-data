@@ -1,0 +1,166 @@
+{
+	"definitions": {},
+	"$schema": "http://json-schema.org/draft-07/schema#", 
+	"$id": "https://example.com/object1603862947.json", 
+	"title": "Root", 
+	"type": "object",
+	"required": [
+		"tenantId",
+		"moduleName",
+		"UsageCategorySubMinor"
+	],
+	"properties": {
+		"tenantId": {
+			"$id": "#root/tenantId", 
+			"title": "Tenantid", 
+			"type": "string",
+			"default": "",
+			"examples": [
+				"uk"
+			],
+			"pattern": "^.*$"
+		},
+		"moduleName": {
+			"$id": "#root/moduleName", 
+			"title": "Modulename", 
+			"type": "string",
+			"default": "",
+			"examples": [
+				"PropertyTax"
+			],
+			"pattern": "^.*$"
+		},
+		"UsageCategorySubMinor": {
+			"$id": "#root/UsageCategorySubMinor", 
+			"title": "Usagecategorysubminor", 
+			"type": "array",
+			"default": [],
+			"items":{
+				"$id": "#root/UsageCategorySubMinor/items", 
+				"title": "Items", 
+				"type": "object",
+				"required": [
+					"code",
+					"usageCategoryMinor",
+					"usageCategoryMajor",
+					"name",
+					"active",
+					"fromFY",
+					"ARVFactor",
+					"exemption"
+				],
+				"properties": {
+					"code": {
+						"$id": "#root/UsageCategorySubMinor/items/code", 
+						"title": "Code", 
+						"type": "string",
+						"default": "",
+						"examples": [
+							"SUBMNR02"
+						],
+						"pattern": "^.*$"
+					},
+					"usageCategoryMinor": {
+						"$id": "#root/UsageCategorySubMinor/items/usageCategoryMinor", 
+						"title": "Usagecategoryminor", 
+						"type": "string",
+						"default": "",
+						"examples": [
+							"NONRESIDENTIAL"
+						],
+						"pattern": "^.*$"
+					},
+					"usageCategoryMajor": {
+						"$id": "#root/UsageCategorySubMinor/items/usageCategoryMajor", 
+						"title": "Usagecategorymajor", 
+						"type": "string",
+						"default": "",
+						"examples": [
+							"NONRESIDENTIAL"
+						],
+						"pattern": "^.*$"
+					},
+					"name": {
+						"$id": "#root/UsageCategorySubMinor/items/name", 
+						"title": "Name", 
+						"type": "string",
+						"default": "",
+						"examples": [
+							"Hotel Paying Guest House up to 10 rooms (without air-conditioned)"
+						],
+						"pattern": "^.*$"
+					},
+					"active": {
+						"$id": "#root/UsageCategorySubMinor/items/active", 
+						"title": "Active", 
+						"type": "boolean",
+						"examples": [
+							true
+						],
+						"default": true
+					},
+					"fromFY": {
+						"$id": "#root/UsageCategorySubMinor/items/fromFY", 
+						"title": "Fromfy", 
+						"type": "string",
+						"default": "",
+						"examples": [
+							"2014-15"
+						],
+						"pattern": "^.*$"
+					},
+					"ARVFactor": {
+						"$id": "#root/UsageCategorySubMinor/items/ARVFactor", 
+						"title": "Arvfactor", 
+						"type": "integer",
+						"examples": [
+							3
+						],
+						"default": 0
+					},
+					"exemption": {
+						"$id": "#root/UsageCategorySubMinor/items/exemption", 
+						"title": "Exemption", 
+						"type": "object",
+						"required": [
+							"rate",
+							"maxAmount",
+							"flatAmount"
+						],
+						"properties": {
+							"rate": {
+								"$id": "#root/UsageCategorySubMinor/items/exemption/rate", 
+								"title": "Rate", 
+								"type": "integer",
+								"examples": [
+									0
+								],
+								"default": 0
+							},
+							"maxAmount": {
+								"$id": "#root/UsageCategorySubMinor/items/exemption/maxAmount", 
+								"title": "Maxamount", 
+								"type": "integer",
+								"examples": [
+									0
+								],
+								"default": 0
+							},
+							"flatAmount": {
+								"$id": "#root/UsageCategorySubMinor/items/exemption/flatAmount", 
+								"title": "Flatamount", 
+								"type": "integer",
+								"examples": [
+									0
+								],
+								"default": 0
+							}
+						}
+					}
+
+				}
+			}
+
+		}
+	}
+}
