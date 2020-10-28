@@ -1,0 +1,93 @@
+{
+	"definitions": {},
+	"$schema": "http://json-schema.org/draft-07/schema#", 
+	"$id": "https://example.com/object1603865902.json", 
+	"title": "Root", 
+	"type": "object",
+	"required": [
+		"tenantId",
+		"moduleName",
+		"UsageCategoryMajor"
+	],
+	"properties": {
+		"tenantId": {
+			"$id": "#root/tenantId", 
+			"title": "Tenantid", 
+			"type": "string",
+			"default": "",
+			"examples": [
+				"uk"
+			],
+			"pattern": "^.*$"
+		},
+		"moduleName": {
+			"$id": "#root/moduleName", 
+			"title": "Modulename", 
+			"type": "string",
+			"default": "",
+			"examples": [
+				"PropertyTax"
+			],
+			"pattern": "^.*$"
+		},
+		"UsageCategoryMajor": {
+			"$id": "#root/UsageCategoryMajor", 
+			"title": "Usagecategorymajor", 
+			"type": "array",
+			"default": [],
+			"items":{
+				"$id": "#root/UsageCategoryMajor/items", 
+				"title": "Items", 
+				"type": "object",
+				"required": [
+					"name",
+					"code",
+					"active",
+					"fromFY"
+				],
+				"properties": {
+					"name": {
+						"$id": "#root/UsageCategoryMajor/items/name", 
+						"title": "Name", 
+						"type": "string",
+						"default": "",
+						"examples": [
+							"Residential"
+						],
+						"pattern": "^.*$"
+					},
+					"code": {
+						"$id": "#root/UsageCategoryMajor/items/code", 
+						"title": "Code", 
+						"type": "string",
+						"default": "",
+						"examples": [
+							"RESIDENTIAL"
+						],
+						"pattern": "^.*$"
+					},
+					"active": {
+						"$id": "#root/UsageCategoryMajor/items/active", 
+						"title": "Active", 
+						"type": "boolean",
+						"examples": [
+							true
+						],
+						"default": true
+					},
+					"fromFY": {
+						"$id": "#root/UsageCategoryMajor/items/fromFY", 
+						"title": "Fromfy", 
+						"type": "string",
+						"default": "",
+						"examples": [
+							"2014-15"
+						],
+						"pattern": "^.*$"
+					}
+				}
+			}
+
+		}
+	}
+}
