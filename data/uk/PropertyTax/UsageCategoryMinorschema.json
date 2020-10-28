@@ -1,0 +1,104 @@
+{
+	"definitions": {},
+	"$schema": "http://json-schema.org/draft-07/schema#", 
+	"$id": "https://example.com/object1603866114.json", 
+	"title": "Root", 
+	"type": "object",
+	"required": [
+		"tenantId",
+		"moduleName",
+		"UsageCategoryMinor"
+	],
+	"properties": {
+		"tenantId": {
+			"$id": "#root/tenantId", 
+			"title": "Tenantid", 
+			"type": "string",
+			"default": "",
+			"examples": [
+				"uk"
+			],
+			"pattern": "^.*$"
+		},
+		"moduleName": {
+			"$id": "#root/moduleName", 
+			"title": "Modulename", 
+			"type": "string",
+			"default": "",
+			"examples": [
+				"PropertyTax"
+			],
+			"pattern": "^.*$"
+		},
+		"UsageCategoryMinor": {
+			"$id": "#root/UsageCategoryMinor", 
+			"title": "Usagecategoryminor", 
+			"type": "array",
+			"default": [],
+			"items":{
+				"$id": "#root/UsageCategoryMinor/items", 
+				"title": "Items", 
+				"type": "object",
+				"required": [
+					"name",
+					"code",
+					"active",
+					"fromFY",
+					"usageCategoryMajor"
+				],
+				"properties": {
+					"name": {
+						"$id": "#root/UsageCategoryMinor/items/name", 
+						"title": "Name", 
+						"type": "string",
+						"default": "",
+						"examples": [
+							"Residential"
+						],
+						"pattern": "^.*$"
+					},
+					"code": {
+						"$id": "#root/UsageCategoryMinor/items/code", 
+						"title": "Code", 
+						"type": "string",
+						"default": "",
+						"examples": [
+							"RESIDENTIAL"
+						],
+						"pattern": "^.*$"
+					},
+					"active": {
+						"$id": "#root/UsageCategoryMinor/items/active", 
+						"title": "Active", 
+						"type": "boolean",
+						"examples": [
+							true
+						],
+						"default": true
+					},
+					"fromFY": {
+						"$id": "#root/UsageCategoryMinor/items/fromFY", 
+						"title": "Fromfy", 
+						"type": "string",
+						"default": "",
+						"examples": [
+							"2014-15"
+						],
+						"pattern": "^.*$"
+					},
+					"usageCategoryMajor": {
+						"$id": "#root/UsageCategoryMinor/items/usageCategoryMajor", 
+						"title": "Usagecategorymajor", 
+						"type": "string",
+						"default": "",
+						"examples": [
+							"RESIDENTIAL"
+						],
+						"pattern": "^.*$"
+					}
+				}
+			}
+
+		}
+	}
+}
