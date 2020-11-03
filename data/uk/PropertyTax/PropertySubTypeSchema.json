@@ -1,0 +1,93 @@
+{
+	"definitions": {},
+	"$schema": "http://json-schema.org/draft-07/schema#", 
+	"$id": "https://example.com/object1604397975.json", 
+	"title": "Root", 
+	"type": "object",
+	"required": [
+		"tenantId",
+		"moduleName",
+		"PropertySubType"
+	],
+	"properties": {
+		"tenantId": {
+			"$id": "#root/tenantId", 
+			"title": "Tenantid", 
+			"type": "string",
+			"default": "",
+			"examples": [
+				"uk"
+			],
+			"pattern": "^.*$"
+		},
+		"moduleName": {
+			"$id": "#root/moduleName", 
+			"title": "Modulename", 
+			"type": "string",
+			"default": "",
+			"examples": [
+				"PropertyTax"
+			],
+			"pattern": "^.*$"
+		},
+		"PropertySubType": {
+			"$id": "#root/PropertySubType", 
+			"title": "Propertysubtype", 
+			"type": "array",
+			"default": [],
+			"items":{
+				"$id": "#root/PropertySubType/items", 
+				"title": "Items", 
+				"type": "object",
+				"required": [
+					"name",
+					"code",
+					"active",
+					"propertyType"
+				],
+				"properties": {
+					"name": {
+						"$id": "#root/PropertySubType/items/name", 
+						"title": "Name", 
+						"type": "string",
+						"default": "",
+						"examples": [
+							"Flat / Part of the building"
+						],
+						"pattern": "^.*$"
+					},
+					"code": {
+						"$id": "#root/PropertySubType/items/code", 
+						"title": "Code", 
+						"type": "string",
+						"default": "",
+						"examples": [
+							"SHAREDPROPERTY"
+						],
+						"pattern": "^.*$"
+					},
+					"active": {
+						"$id": "#root/PropertySubType/items/active", 
+						"title": "Active", 
+						"type": "boolean",
+						"examples": [
+							true
+						],
+						"default": true
+					},
+					"propertyType": {
+						"$id": "#root/PropertySubType/items/propertyType", 
+						"title": "Propertytype", 
+						"type": "string",
+						"default": "",
+						"examples": [
+							"BUILTUP"
+						],
+						"pattern": "^.*$"
+					}
+				}
+			}
+
+		}
+	}
+}
