@@ -1,0 +1,93 @@
+{
+	"definitions": {},
+	"$schema": "http://json-schema.org/draft-07/schema#", 
+	"$id": "https://example.com/object1604397522.json", 
+	"title": "Root", 
+	"type": "object",
+	"required": [
+		"tenantId",
+		"moduleName",
+		"SubOwnerShipCategory"
+	],
+	"properties": {
+		"tenantId": {
+			"$id": "#root/tenantId", 
+			"title": "Tenantid", 
+			"type": "string",
+			"default": "",
+			"examples": [
+				"uk"
+			],
+			"pattern": "^.*$"
+		},
+		"moduleName": {
+			"$id": "#root/moduleName", 
+			"title": "Modulename", 
+			"type": "string",
+			"default": "",
+			"examples": [
+				"PropertyTax"
+			],
+			"pattern": "^.*$"
+		},
+		"SubOwnerShipCategory": {
+			"$id": "#root/SubOwnerShipCategory", 
+			"title": "Subownershipcategory", 
+			"type": "array",
+			"default": [],
+			"items":{
+				"$id": "#root/SubOwnerShipCategory/items", 
+				"title": "Items", 
+				"type": "object",
+				"required": [
+					"name",
+					"code",
+					"active",
+					"ownerShipCategory"
+				],
+				"properties": {
+					"name": {
+						"$id": "#root/SubOwnerShipCategory/items/name", 
+						"title": "Name", 
+						"type": "string",
+						"default": "",
+						"examples": [
+							"Single Owner"
+						],
+						"pattern": "^.*$"
+					},
+					"code": {
+						"$id": "#root/SubOwnerShipCategory/items/code", 
+						"title": "Code", 
+						"type": "string",
+						"default": "",
+						"examples": [
+							"INDIVIDUAL.SINGLEOWNER"
+						],
+						"pattern": "^.*$"
+					},
+					"active": {
+						"$id": "#root/SubOwnerShipCategory/items/active", 
+						"title": "Active", 
+						"type": "boolean",
+						"examples": [
+							true
+						],
+						"default": true
+					},
+					"ownerShipCategory": {
+						"$id": "#root/SubOwnerShipCategory/items/ownerShipCategory", 
+						"title": "Ownershipcategory", 
+						"type": "string",
+						"default": "",
+						"examples": [
+							"INDIVIDUAL"
+						],
+						"pattern": "^.*$"
+					}
+				}
+			}
+
+		}
+	}
+}
