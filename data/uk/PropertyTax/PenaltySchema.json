@@ -1,0 +1,96 @@
+{
+	"definitions": {},
+	"$schema": "http://json-schema.org/draft-07/schema#", 
+	"$id": "https://example.com/object1604398044.json", 
+	"title": "Root", 
+	"type": "object",
+	"required": [
+		"tenantId",
+		"moduleName",
+		"Penalty"
+	],
+	"properties": {
+		"tenantId": {
+			"$id": "#root/tenantId", 
+			"title": "Tenantid", 
+			"type": "string",
+			"default": "",
+			"examples": [
+				"uk"
+			],
+			"pattern": "^.*$"
+		},
+		"moduleName": {
+			"$id": "#root/moduleName", 
+			"title": "Modulename", 
+			"type": "string",
+			"default": "",
+			"examples": [
+				"PropertyTax"
+			],
+			"pattern": "^.*$"
+		},
+		"Penalty": {
+			"$id": "#root/Penalty", 
+			"title": "Penalty", 
+			"type": "array",
+			"default": [],
+			"items":{
+				"$id": "#root/Penalty/items", 
+				"title": "Items", 
+				"type": "object",
+				"required": [
+					"rate",
+					"minAmount",
+					"flatAmount",
+					"fromFY",
+					"startingDay"
+				],
+				"properties": {
+					"rate": {
+						"$id": "#root/Penalty/items/rate", 
+						"title": "Rate", 
+						"type": "integer",
+						"examples": [
+							20
+						],
+						"default": 0
+					},
+					"minAmount": {
+						"$id": "#root/Penalty/items/minAmount", 
+						"title": "Minamount", 
+						"type": "null",
+						"default": null
+					},
+					"flatAmount": {
+						"$id": "#root/Penalty/items/flatAmount", 
+						"title": "Flatamount", 
+						"type": "null",
+						"default": null
+					},
+					"fromFY": {
+						"$id": "#root/Penalty/items/fromFY", 
+						"title": "Fromfy", 
+						"type": "string",
+						"default": "",
+						"examples": [
+							"2014-15"
+						],
+						"pattern": "^.*$"
+					},
+					"startingDay": {
+						"$id": "#root/Penalty/items/startingDay", 
+						"title": "Startingday", 
+						"type": "string",
+						"default": "",
+						"examples": [
+							"01/04/2014"
+						],
+						"pattern": "^.*$"
+					}
+				}
+			}
+
+		}
+	}
+}
