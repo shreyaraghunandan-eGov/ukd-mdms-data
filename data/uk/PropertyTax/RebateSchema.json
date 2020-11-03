@@ -1,0 +1,107 @@
+{
+	"definitions": {},
+	"$schema": "http://json-schema.org/draft-07/schema#", 
+	"$id": "https://example.com/object1604397757.json", 
+	"title": "Root", 
+	"type": "object",
+	"required": [
+		"tenantId",
+		"moduleName",
+		"Rebate"
+	],
+	"properties": {
+		"tenantId": {
+			"$id": "#root/tenantId", 
+			"title": "Tenantid", 
+			"type": "string",
+			"default": "",
+			"examples": [
+				"uk"
+			],
+			"pattern": "^.*$"
+		},
+		"moduleName": {
+			"$id": "#root/moduleName", 
+			"title": "Modulename", 
+			"type": "string",
+			"default": "",
+			"examples": [
+				"PropertyTax"
+			],
+			"pattern": "^.*$"
+		},
+		"Rebate": {
+			"$id": "#root/Rebate", 
+			"title": "Rebate", 
+			"type": "array",
+			"default": [],
+			"items":{
+				"$id": "#root/Rebate/items", 
+				"title": "Items", 
+				"type": "object",
+				"required": [
+					"rate",
+					"maxAmount",
+					"flatAmount",
+					"fromFY",
+					"startingDay",
+					"endingDay"
+				],
+				"properties": {
+					"rate": {
+						"$id": "#root/Rebate/items/rate", 
+						"title": "Rate", 
+						"type": "integer",
+						"examples": [
+							10
+						],
+						"default": 0
+					},
+					"maxAmount": {
+						"$id": "#root/Rebate/items/maxAmount", 
+						"title": "Maxamount", 
+						"type": "null",
+						"default": null
+					},
+					"flatAmount": {
+						"$id": "#root/Rebate/items/flatAmount", 
+						"title": "Flatamount", 
+						"type": "null",
+						"default": null
+					},
+					"fromFY": {
+						"$id": "#root/Rebate/items/fromFY", 
+						"title": "Fromfy", 
+						"type": "string",
+						"default": "",
+						"examples": [
+							"2018-19"
+						],
+						"pattern": "^.*$"
+					},
+					"startingDay": {
+						"$id": "#root/Rebate/items/startingDay", 
+						"title": "Startingday", 
+						"type": "string",
+						"default": "",
+						"examples": [
+							"01/04/2005"
+						],
+						"pattern": "^.*$"
+					},
+					"endingDay": {
+						"$id": "#root/Rebate/items/endingDay", 
+						"title": "Endingday", 
+						"type": "string",
+						"default": "",
+						"examples": [
+							"31/03/2020"
+						],
+						"pattern": "^.*$"
+					}
+				}
+			}
+
+		}
+	}
+}
