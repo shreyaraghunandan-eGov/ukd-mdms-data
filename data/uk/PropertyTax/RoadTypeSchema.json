@@ -1,0 +1,82 @@
+{
+	"definitions": {},
+	"$schema": "http://json-schema.org/draft-07/schema#", 
+	"$id": "https://example.com/object1604397653.json", 
+	"title": "Root", 
+	"type": "object",
+	"required": [
+		"tenantId",
+		"moduleName",
+		"RoadType"
+	],
+	"properties": {
+		"tenantId": {
+			"$id": "#root/tenantId", 
+			"title": "Tenantid", 
+			"type": "string",
+			"default": "",
+			"examples": [
+				"uk"
+			],
+			"pattern": "^.*$"
+		},
+		"moduleName": {
+			"$id": "#root/moduleName", 
+			"title": "Modulename", 
+			"type": "string",
+			"default": "",
+			"examples": [
+				"PropertyTax"
+			],
+			"pattern": "^.*$"
+		},
+		"RoadType": {
+			"$id": "#root/RoadType", 
+			"title": "Roadtype", 
+			"type": "array",
+			"default": [],
+			"items":{
+				"$id": "#root/RoadType/items", 
+				"title": "Items", 
+				"type": "object",
+				"required": [
+					"name",
+					"code",
+					"active"
+				],
+				"properties": {
+					"name": {
+						"$id": "#root/RoadType/items/name", 
+						"title": "Name", 
+						"type": "string",
+						"default": "",
+						"examples": [
+							"Less than 12 meters in width"
+						],
+						"pattern": "^.*$"
+					},
+					"code": {
+						"$id": "#root/RoadType/items/code", 
+						"title": "Code", 
+						"type": "string",
+						"default": "",
+						"examples": [
+							"RD1"
+						],
+						"pattern": "^.*$"
+					},
+					"active": {
+						"$id": "#root/RoadType/items/active", 
+						"title": "Active", 
+						"type": "boolean",
+						"examples": [
+							true
+						],
+						"default": true
+					}
+				}
+			}
+
+		}
+	}
+}
