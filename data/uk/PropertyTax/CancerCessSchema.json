@@ -1,0 +1,92 @@
+{
+	"definitions": {},
+	"$schema": "http://json-schema.org/draft-07/schema#", 
+	"$id": "https://example.com/object1604463114.json", 
+	"title": "Root", 
+	"type": "object",
+	"required": [
+		"tenantId",
+		"moduleName",
+		"CancerCess"
+	],
+	"properties": {
+		"tenantId": {
+			"$id": "#root/tenantId", 
+			"title": "Tenantid", 
+			"type": "string",
+			"default": "",
+			"examples": [
+				"uk"
+			],
+			"pattern": "^.*$"
+		},
+		"moduleName": {
+			"$id": "#root/moduleName", 
+			"title": "Modulename", 
+			"type": "string",
+			"default": "",
+			"examples": [
+				"PropertyTax"
+			],
+			"pattern": "^.*$"
+		},
+		"CancerCess": {
+			"$id": "#root/CancerCess", 
+			"title": "Cancercess", 
+			"type": "array",
+			"default": [],
+			"items":{
+				"$id": "#root/CancerCess/items", 
+				"title": "Items", 
+				"type": "object",
+				"required": [
+					"rate",
+					"minAmount",
+					"flatAmount",
+					"maxAmount",
+					"fromFY"
+				],
+				"properties": {
+					"rate": {
+						"$id": "#root/CancerCess/items/rate", 
+						"title": "Rate", 
+						"type": "integer",
+						"examples": [
+							2
+						],
+						"default": 0
+					},
+					"minAmount": {
+						"$id": "#root/CancerCess/items/minAmount", 
+						"title": "Minamount", 
+						"type": "null",
+						"default": null
+					},
+					"flatAmount": {
+						"$id": "#root/CancerCess/items/flatAmount", 
+						"title": "Flatamount", 
+						"type": "null",
+						"default": null
+					},
+					"maxAmount": {
+						"$id": "#root/CancerCess/items/maxAmount", 
+						"title": "Maxamount", 
+						"type": "null",
+						"default": null
+					},
+					"fromFY": {
+						"$id": "#root/CancerCess/items/fromFY", 
+						"title": "Fromfy", 
+						"type": "string",
+						"default": "",
+						"examples": [
+							"2014-15"
+						],
+						"pattern": "^.*$"
+					}
+				}
+			}
+
+		}
+	}
+}
