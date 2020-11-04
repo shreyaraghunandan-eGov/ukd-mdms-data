@@ -1,0 +1,82 @@
+{
+	"definitions": {},
+	"$schema": "http://json-schema.org/draft-07/schema#", 
+	"$id": "https://example.com/object1604476900.json", 
+	"title": "Root", 
+	"type": "object",
+	"required": [
+		"tenantId",
+		"moduleName",
+		"OwnerShipCategory"
+	],
+	"properties": {
+		"tenantId": {
+			"$id": "#root/tenantId", 
+			"title": "Tenantid", 
+			"type": "string",
+			"default": "",
+			"examples": [
+				"uk"
+			],
+			"pattern": "^.*$"
+		},
+		"moduleName": {
+			"$id": "#root/moduleName", 
+			"title": "Modulename", 
+			"type": "string",
+			"default": "",
+			"examples": [
+				"PropertyTax"
+			],
+			"pattern": "^.*$"
+		},
+		"OwnerShipCategory": {
+			"$id": "#root/OwnerShipCategory", 
+			"title": "Ownershipcategory", 
+			"type": "array",
+			"default": [],
+			"items":{
+				"$id": "#root/OwnerShipCategory/items", 
+				"title": "Items", 
+				"type": "object",
+				"required": [
+					"name",
+					"code",
+					"active"
+				],
+				"properties": {
+					"name": {
+						"$id": "#root/OwnerShipCategory/items/name", 
+						"title": "Name", 
+						"type": "string",
+						"default": "",
+						"examples": [
+							"Individual(s)"
+						],
+						"pattern": "^.*$"
+					},
+					"code": {
+						"$id": "#root/OwnerShipCategory/items/code", 
+						"title": "Code", 
+						"type": "string",
+						"default": "",
+						"examples": [
+							"INDIVIDUAL"
+						],
+						"pattern": "^.*$"
+					},
+					"active": {
+						"$id": "#root/OwnerShipCategory/items/active", 
+						"title": "Active", 
+						"type": "boolean",
+						"examples": [
+							true
+						],
+						"default": true
+					}
+				}
+			}
+
+		}
+	}
+}
