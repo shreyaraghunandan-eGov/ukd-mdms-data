@@ -1,0 +1,104 @@
+{
+	"definitions": {},
+	"$schema": "http://json-schema.org/draft-07/schema#", 
+	"$id": "https://example.com/object1604459374.json", 
+	"title": "Root", 
+	"type": "object",
+	"required": [
+		"tenantId",
+		"moduleName",
+		"OwnerTypeDocument"
+	],
+	"properties": {
+		"tenantId": {
+			"$id": "#root/tenantId", 
+			"title": "Tenantid", 
+			"type": "string",
+			"default": "",
+			"examples": [
+				"uk"
+			],
+			"pattern": "^.*$"
+		},
+		"moduleName": {
+			"$id": "#root/moduleName", 
+			"title": "Modulename", 
+			"type": "string",
+			"default": "",
+			"examples": [
+				"PropertyTax"
+			],
+			"pattern": "^.*$"
+		},
+		"OwnerTypeDocument": {
+			"$id": "#root/OwnerTypeDocument", 
+			"title": "Ownertypedocument", 
+			"type": "array",
+			"default": [],
+			"items":{
+				"$id": "#root/OwnerTypeDocument/items", 
+				"title": "Items", 
+				"type": "object",
+				"required": [
+					"name",
+					"code",
+					"ownerTypeCode",
+					"active",
+					"effectiveFromFY"
+				],
+				"properties": {
+					"name": {
+						"$id": "#root/OwnerTypeDocument/items/name", 
+						"title": "Name", 
+						"type": "string",
+						"default": "",
+						"examples": [
+							"Certificate issued by DC/ Competent Authority"
+						],
+						"pattern": "^.*$"
+					},
+					"code": {
+						"$id": "#root/OwnerTypeDocument/items/code", 
+						"title": "Code", 
+						"type": "string",
+						"default": "",
+						"examples": [
+							"COMPETENTAUTHORITY"
+						],
+						"pattern": "^.*$"
+					},
+					"ownerTypeCode": {
+						"$id": "#root/OwnerTypeDocument/items/ownerTypeCode", 
+						"title": "Ownertypecode", 
+						"type": "string",
+						"default": "",
+						"examples": [
+							"FREEDOMFIGHTER"
+						],
+						"pattern": "^.*$"
+					},
+					"active": {
+						"$id": "#root/OwnerTypeDocument/items/active", 
+						"title": "Active", 
+						"type": "boolean",
+						"examples": [
+							true
+						],
+						"default": true
+					},
+					"effectiveFromFY": {
+						"$id": "#root/OwnerTypeDocument/items/effectiveFromFY", 
+						"title": "Effectivefromfy", 
+						"type": "string",
+						"default": "",
+						"examples": [
+							"2014-15"
+						],
+						"pattern": "^.*$"
+					}
+				}
+			}
+
+		}
+	}
+}
