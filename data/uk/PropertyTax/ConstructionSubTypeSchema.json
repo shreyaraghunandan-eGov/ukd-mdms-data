@@ -1,0 +1,93 @@
+{
+	"definitions": {},
+	"$schema": "http://json-schema.org/draft-07/schema#", 
+	"$id": "https://example.com/object1604484347.json", 
+	"title": "Root", 
+	"type": "object",
+	"required": [
+		"tenantId",
+		"moduleName",
+		"ConstructionSubType"
+	],
+	"properties": {
+		"tenantId": {
+			"$id": "#root/tenantId", 
+			"title": "Tenantid", 
+			"type": "string",
+			"default": "",
+			"examples": [
+				"uk"
+			],
+			"pattern": "^.*$"
+		},
+		"moduleName": {
+			"$id": "#root/moduleName", 
+			"title": "Modulename", 
+			"type": "string",
+			"default": "",
+			"examples": [
+				"PropertyTax"
+			],
+			"pattern": "^.*$"
+		},
+		"ConstructionSubType": {
+			"$id": "#root/ConstructionSubType", 
+			"title": "Constructionsubtype", 
+			"type": "array",
+			"default": [],
+			"items":{
+				"$id": "#root/ConstructionSubType/items", 
+				"title": "Items", 
+				"type": "object",
+				"required": [
+					"id",
+					"name",
+					"code",
+					"active"
+				],
+				"properties": {
+					"id": {
+						"$id": "#root/ConstructionSubType/items/id", 
+						"title": "Id", 
+						"type": "string",
+						"default": "",
+						"examples": [
+							"1"
+						],
+						"pattern": "^.*$"
+					},
+					"name": {
+						"$id": "#root/ConstructionSubType/items/name", 
+						"title": "Name", 
+						"type": "string",
+						"default": "",
+						"examples": [
+							"Pucca"
+						],
+						"pattern": "^.*$"
+					},
+					"code": {
+						"$id": "#root/ConstructionSubType/items/code", 
+						"title": "Code", 
+						"type": "string",
+						"default": "",
+						"examples": [
+							"PUCCA"
+						],
+						"pattern": "^.*$"
+					},
+					"active": {
+						"$id": "#root/ConstructionSubType/items/active", 
+						"title": "Active", 
+						"type": "boolean",
+						"examples": [
+							true
+						],
+						"default": true
+					}
+				}
+			}
+
+		}
+	}
+}
