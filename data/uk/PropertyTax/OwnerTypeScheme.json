@@ -1,0 +1,142 @@
+{
+	"definitions": {},
+	"$schema": "http://json-schema.org/draft-07/schema#", 
+	"$id": "https://example.com/object1604475675.json", 
+	"title": "Root", 
+	"type": "object",
+	"required": [
+		"tenantId",
+		"moduleName",
+		"OwnerType"
+	],
+	"properties": {
+		"tenantId": {
+			"$id": "#root/tenantId", 
+			"title": "Tenantid", 
+			"type": "string",
+			"default": "",
+			"examples": [
+				"uk"
+			],
+			"pattern": "^.*$"
+		},
+		"moduleName": {
+			"$id": "#root/moduleName", 
+			"title": "Modulename", 
+			"type": "string",
+			"default": "",
+			"examples": [
+				"PropertyTax"
+			],
+			"pattern": "^.*$"
+		},
+		"OwnerType": {
+			"$id": "#root/OwnerType", 
+			"title": "Ownertype", 
+			"type": "array",
+			"default": [],
+			"items":{
+				"$id": "#root/OwnerType/items", 
+				"title": "Items", 
+				"type": "object",
+				"required": [
+					"name",
+					"code",
+					"ownerTypeDocument",
+					"active",
+					"fromFY",
+					"exemption"
+				],
+				"properties": {
+					"name": {
+						"$id": "#root/OwnerType/items/name", 
+						"title": "Name", 
+						"type": "string",
+						"default": "",
+						"examples": [
+							"Freedom Fighter"
+						],
+						"pattern": "^.*$"
+					},
+					"code": {
+						"$id": "#root/OwnerType/items/code", 
+						"title": "Code", 
+						"type": "string",
+						"default": "",
+						"examples": [
+							"FREEDOMFIGHTER"
+						],
+						"pattern": "^.*$"
+					},
+					"ownerTypeDocument": {
+						"$id": "#root/OwnerType/items/ownerTypeDocument", 
+						"title": "Ownertypedocument", 
+						"type": "array",
+						"default": [],
+						"items":{
+							"$id": "#root/OwnerType/items/ownerTypeDocument/items", 
+							"title": "Items", 
+							"type": "string",
+							"default": "",
+							"examples": [
+								"COMPETENTAUTHORITY"
+							],
+							"pattern": "^.*$"
+						}
+					},
+					"active": {
+						"$id": "#root/OwnerType/items/active", 
+						"title": "Active", 
+						"type": "boolean",
+						"examples": [
+							true
+						],
+						"default": true
+					},
+					"fromFY": {
+						"$id": "#root/OwnerType/items/fromFY", 
+						"title": "Fromfy", 
+						"type": "string",
+						"default": "",
+						"examples": [
+							"2014-15"
+						],
+						"pattern": "^.*$"
+					},
+					"exemption": {
+						"$id": "#root/OwnerType/items/exemption", 
+						"title": "Exemption", 
+						"type": "object",
+						"required": [
+							"rate",
+							"maxAmount",
+							"flatAmount"
+						],
+						"properties": {
+							"rate": {
+								"$id": "#root/OwnerType/items/exemption/rate", 
+								"title": "Rate", 
+								"type": "null",
+								"default": null
+							},
+							"maxAmount": {
+								"$id": "#root/OwnerType/items/exemption/maxAmount", 
+								"title": "Maxamount", 
+								"type": "null",
+								"default": null
+							},
+							"flatAmount": {
+								"$id": "#root/OwnerType/items/exemption/flatAmount", 
+								"title": "Flatamount", 
+								"type": "null",
+								"default": null
+							}
+						}
+					}
+
+				}
+			}
+
+		}
+	}
+}
